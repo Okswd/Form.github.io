@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Form</title>
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form class="form__body" id="form" action="#" method="POST" enctype="multipart/form-data">
+          <h1 class="form__title">Sending data by mail</h1>
+          <div class="form__item">
+            <label class="form__label" for="formName">Name*:</label>
+            <input class="form__input _req" id="formName" type="text" name="name">
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="formEmail">E-mail*:</label>
+            <input class="form__input _req _email" id="formEmail" type="text" name="name">
+          </div>
+          <div class="form__item">
+            <div class="form__label">Right handed or left handed?</div>
+            <div class="options">
+              <div class="options__item">
+                <input class="options__input" id="formRightHanded" checked value="right" type="radio" name="hand">
+                <label class="options__label" for="formRightHanded"><span>Right handed</span></label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" id="formLeftHanded" value="left" type="radio" name="hand">
+                <label class="options__label" for="formLeftHanded"><span>Left handed</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="formMessage">Message:</label>
+            <textarea class="form__input" name="message" id="formMessage"></textarea>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Age:</div>
+            <select class="select" name="age">
+              <option value="from 18 to 40">Young</option>
+              <option value="from 40 to 60">Aged</option>
+              <option value="from 60 to 90">Old</option>
+            </select>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Attach a photo</div>
+            <div class="file">
+              <div class="file__item">
+                <input class="file__input" id="formImage" accept=".jpg, .png, .gif" type="file" name="image">
+                <div class="file__button">Select</div>
+              </div>
+              <div class="file__preview" id="formPreview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input class="checkbox__input _req" checked id="formAgreement" type="checkbox" name="agreement">
+              <label class="checkbox__label" for="formAgreement"><span>I give my consent to the processing of personal data in accordance with <a href="">the Terms</a>*</span></label>
+            </div>
+          </div>
+          <button class="form__button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

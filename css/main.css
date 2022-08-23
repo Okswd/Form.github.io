@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  background-color: #06858E;
+  font-family: 'Montserrat';
+}
+.form {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #ECFBFC;
+  padding: 30px 0;
+}
+.form * {
+  outline: none;
+}
+.form__body {
+  position: relative;
+}
+.form__body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #06858ebd url("../img/yH.gif") center / 350px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.form__body._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+.form__title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0px 0px 30px 0px;
+}
+.form__item {
+  margin: 0px 0px 30px 0px;
+}
+.form__label {
+  font-size: 18px;
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+.form__input {
+  height: 50px;
+  padding: 0px 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+  transition: box-shadow 0.5s ease 0s;
+}
+.form__input:focus {
+  box-shadow: 0 0 15px #ECFBFC;
+}
+.form__input._error {
+  box-shadow: 0 0 10px #ff00b3;
+}
+textarea.form__input {
+  min-height: 120px;
+  resize: vertical;
+  padding: 20px;
+}
+.options {
+  padding: 10px 0px 0px 0px;
+}
+.options__item {
+  margin: 0px 0px 10px 0px;
+}
+.options__input {
+  display: none;
+}
+.options__input:checked + .options__label::after {
+  transform: scale(1);
+}
+.options__label {
+  display: inline-flex;
+  font-size: 14px;
+  line-height: 140%;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.options__label::before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #ECFBFC;
+  border-radius: 50%;
+  margin: 0px 10px 0px 0px;
+}
+.options__label::after {
+  transition: transform 0.5s ease 0s;
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: #06858E;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.options__label span {
+  width: 200px;
+}
+.select {
+  font-family: 'Montserrat';
+  display: inline-flex;
+  background-color: #06858E;
+  border: 2px solid #fff;
+  color:#fff;
+  border-radius: 5px;
+  padding: .75rem .3rem;
+  cursor: pointer;
+}
+.file__item {
+  position: relative;
+}
+.file__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+.file__button {
+  display: inline-flex;
+  min-height: 40px;
+  border: 2px solid #fff;
+  color:#fff;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: .75rem 1.2rem;
+}
+.file__preview {
+  display: inline-block;
+  max-width: 100px;
+  padding: 10px 0px 0px 0px;
+}
+.file__preview img {
+  max-width: 100%;
+}
+.checkbox._error .checkbox__label::before {
+  box-shadow: 0 0 10px #ff00b3;
+}
+.checkbox__input {
+  display: none;
+}
+.checkbox__input:checked + .checkbox__label::after {
+  transform: scale(1);
+}
+.checkbox__label {
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox__label::before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0px 10px 0px 0px;
+}
+.checkbox__label::after {
+  transition: transform 0.5s ease 0s;
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #06858E;
+  border-radius: 3px;
+  transform: scale(0);
+}
+.checkbox__label a {
+  color: #1ff0ff;
+}
+.form__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  background-color: #06858E;
+  border: 2px solid #fff;
+  color:#fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: box-shadow 0.5s ease 0s;
+}
+.form__button:hover {
+  box-shadow: 0 0 15px #ECFBFC;
+}
